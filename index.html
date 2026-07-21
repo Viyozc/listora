@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Listora — Etsy Listing SEO, on autopilot (for digital-product sellers)</title>
+  <meta name="description" content="Listora helps Etsy digital-product sellers rank higher. Run a free Listing SEO Audit — get a 0–100 score and fix your title, 13 tags, and description in minutes." />
+  <link rel="canonical" href="https://Viyozc.github.io/listora/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Listora — Etsy Listing SEO, on autopilot (for digital-product sellers)" />
+  <meta property="og:description" content="Listora helps Etsy digital-product sellers rank higher. Run a free Listing SEO Audit — get a 0–100 score and fix your title, 13 tags, and description in minutes." />
+  <meta property="og:url" content="https://Viyozc.github.io/listora/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Listora — Etsy Listing SEO, on autopilot (for digital-product sellers)" />
+  <meta name="twitter:description" content="Listora helps Etsy digital-product sellers rank higher. Run a free Listing SEO Audit — get a 0–100 score and fix your title, 13 tags, and description in minutes." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="assets/style.css" />
+
+  <script type="application/ld+json">
+  {{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Listora","url":"https://Viyozc.github.io/listora/","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+  </script>
+</head>
+<body>
+  <!-- ===== Nav ===== -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top">Listora<span class="brand-dot">.</span></a>
+      <nav class="nav-links">
+        <a href="#audit">Free Audit</a>
+        <a href="#how">How it works</a>
+        <a href="#why">Why digital sellers</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="btn btn-primary nav-cta" href="#audit">Run free audit</a>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero" id="top">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <span class="badge">Built for Etsy digital-product sellers</span>
+        <h1>Turn your Etsy listing into a <span class="hl">ranking machine</span>.</h1>
+        <p class="lede">
+          Most digital downloads never get seen because the title, tags, and description
+          are guessed, not engineered. Listora scores your listing like Etsy's search does —
+          and tells you exactly what to fix.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="#audit">Run a free Listing SEO Audit →</a>
+          <span class="hero-note">No signup required · 30 seconds · 100% free</span>
+        </div>
+        <div class="hero-stats">
+          <div><strong>13</strong><span>tags Etsy rewards</span></div>
+          <div><strong>140</strong><span>chars in the title</span></div>
+          <div><strong>0–100</strong><span>SEO score you get</span></div>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="score-card">
+          <div class="score-ring"><span class="score-num" id="heroScore">—</span><span class="score-grad">/100</span></div>
+          <div class="score-meta">
+            <span class="grade" id="heroGrade">Grade</span>
+            <span class="score-sub">Your listing's SEO health</span>
+          </div>
+          <div class="mini-bars">
+            <div class="mbar"><i style="width:82%"></i><span>Title</span></div>
+            <div class="mbar"><i style="width:64%"></i><span>Tags</span></div>
+            <div class="mbar"><i style="width:71%"></i><span>Keywords</span></div>
+            <div class="mbar"><i style="width:55%"></i><span>Description</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Audit Tool ===== -->
+  <section class="audit" id="audit">
+    <div class="container">
+      <div class="section-head">
+        <h2>Free Listing SEO Audit</h2>
+        <p>Paste your current Etsy listing details. We'll score it against how Etsy search actually ranks, and hand you a prioritized fix list. No account, no credit card.</p>
+      </div>
+
+      <div class="audit-grid">
+        <!-- Input -->
+        <form class="audit-form" id="auditForm" novalidate>
+          <label class="field">
+            <span>Listing title <em id="titleCount">0 / 140</em></span>
+            <input type="text" id="fTitle" maxlength="140" placeholder="e.g. Printable Minimalist Planner | Digital PDF Download for Productivity" />
+          </label>
+
+          <label class="field">
+            <span>Tags (comma separated, up to 13) <em id="tagCount">0 / 13</em></span>
+            <textarea id="fTags" rows="3" placeholder="printable planner, digital download, minimalist planner, pdf planner, productivity printable, ..."></textarea>
+          </label>
+
+          <label class="field">
+            <span>Description</span>
+            <textarea id="fDesc" rows="4" placeholder="Describe the product, what's included, format, and who it's for..."></textarea>
+          </label>
+
+          <label class="field">
+            <span>Target keyword / main search phrase <em>optional but recommended</em></span>
+            <input type="text" id="fKeyword" placeholder="e.g. printable minimalist planner" />
+          </label>
+
+          <button type="submit" class="btn btn-primary btn-lg btn-block">Run my free audit →</button>
+          <p class="form-fine">Everything runs in your browser. We never store your listing until you ask us to email it.</p>
+        </form>
+
+        <!-- Result -->
+        <div class="audit-result" id="auditResult" hidden>
+          <div class="result-top">
+            <div class="score-ring lg">
+              <span class="score-num" id="resScore">0</span>
+              <span class="score-grad">/100</span>
+            </div>
+            <div>
+              <span class="grade big" id="resGrade">—</span>
+              <p class="result-sub" id="resSummary">—</p>
+            </div>
+          </div>
+
+          <div class="bars" id="resBars"></div>
+
+          <div class="tips">
+            <h3>What to fix first</h3>
+            <ul id="resTips"></ul>
+          </div>
+
+          <form class="email-capture" id="emailForm" action="https://formspree.io/f/meeyzkdp" method="POST">
+            <label for="fEmail">Get the full report + weekly Etsy SEO tips by email</label>
+            <div class="email-row">
+              <input type="email" id="fEmail" name="email" placeholder="you@email.com" required />
+              <button type="submit" class="btn btn-primary">Email my report</button>
+            </div>
+            <p class="form-fine" id="emailNote">No spam. Unsubscribe anytime.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== How it works ===== -->
+  <section class="how" id="how">
+    <div class="container">
+      <div class="section-head">
+        <h2>How Listora works</h2>
+        <p>Three steps from guessed listing to engineered listing.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <span class="step-num">1</span>
+          <h3>Audit</h3>
+          <p>Drop in your title, 13 tags, and description. Listora scores each dimension the way Etsy's search weights them.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">2</span>
+          <h3>Generate</h3>
+          <p>One click rewrites your title, fills all 13 tags with high-intent phrases, and drafts a keyword-rich description.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">3</span>
+          <h3>Rank</h3>
+          <p>Copy the optimized listing, publish, and track ranking movement. Repeat for your whole shop in minutes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Why digital sellers ===== -->
+  <section class="why" id="why">
+    <div class="container">
+      <div class="section-head">
+        <h2>Why digital-product sellers need this</h2>
+        <p>Digital downloads are the fastest-growing corner of Etsy — and the most SEO-dependent.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <h3>No shelf, no photos doing the work</h3>
+          <p>Physical shops lean on lifestyle photos. Digital shops live or die by searchable text. Your title and tags are your storefront.</p>
+        </div>
+        <div class="why-card">
+          <h3>You list in bulk</h3>
+          <p>A planner bundle can be 40+ listings. Hand-optimizing each is impossible. Listora optimizes the whole catalog at once.</p>
+        </div>
+        <div class="why-card">
+          <h3>Long-tail is everything</h3>
+          <p>Buyers search "printable wedding budget tracker", not "planner". 13 well-built tags capture the phrases that convert.</p>
+        </div>
+        <div class="why-card">
+          <h3>Margins are pure</h3>
+          <p>No shipping, no inventory. Every extra sale from better SEO is near-100% margin. Optimization pays back instantly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-head">
+        <h2>FAQ</h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>Is the audit really free?</summary>
+          <p>Yes. The on-page audit runs entirely in your browser and costs nothing. No account needed.</p>
+        </details>
+        <details>
+          <summary>Do I need to give you my Etsy login?</summary>
+          <p>Never. You paste your listing text manually. Listora never touches your Etsy account.</p>
+        </details>
+        <details>
+          <summary>How is the score calculated?</summary>
+          <p>We weight title length & keyword placement, all 13 tags (favoring multi-word phrases), keyword coverage across title/tags/description, and description depth — the same signals Etsy search rewards.</p>
+        </details>
+        <details>
+          <summary>Will this guarantee I rank #1?</summary>
+          <p>No tool can. But fixing the fundamentals beats guessing, and most shops leave easy points on the table. Listora shows you exactly where.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <a class="brand" href="#top">Listora<span class="brand-dot">.</span></a>
+        <p class="footer-sub">Etsy listing SEO for digital-product sellers. AI-assisted, human-approved.</p>
+      </div>
+            <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:center;font-size:13px;margin-top:10px;">
+        <span style="color:var(--muted);font-weight:600;">More free audit tools:</span>
+<a href="https://Viyozc.github.io/listora/" style="color:var(--brand-dk);font-weight:600;">Listora</a><a href="https://Viyozc.github.io/booklisting-ai/" style="color:var(--brand-dk);font-weight:600;">BookListing</a><a href="https://Viyozc.github.io/mockly-ai/" style="color:var(--brand-dk);font-weight:600;">Mockly</a><a href="https://Viyozc.github.io/newsletterly-ai/" style="color:var(--brand-dk);font-weight:600;">Newsletterly</a>
+      </div>
+      <p class="footer-fine">Listora is an independent tool and is not affiliated with Etsy, Inc. "Etsy" is a trademark of Etsy, Inc.</p>
+    </div>
+  </footer>
+
+  <script src="assets/audit.js"></script>
+</body>
+</html>
