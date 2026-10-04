@@ -1,0 +1,19 @@
+# Listora
+
+> Listora helps Etsy digital-product sellers rank higher. Run a free Listing SEO Audit — get a 0–100 score and fix your title, 13 tags, and description in minutes.
+
+Canonical host: https://listora.aiyes.space
+
+## Core pages
+
+- [Home](https://listora.aiyes.space/)
+
+## Blog
+
+- [How Many Tags on Etsy? The 13-Tag Strategy That Actually Ranks](https://listora.aiyes.space/blog/etsy-tags/)
+- [Etsy Listing SEO: How to Rank Digital Downloads in 2026](https://listora.aiyes.space/blog/)
+
+## Canonical discovery
+
+- [Sitemap](https://listora.aiyes.space/sitemap.xml)
+- [Robots](https://listora.aiyes.space/robots.txt)
